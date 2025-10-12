@@ -1,0 +1,2 @@
+[nat.components]
+weather_climate = weather_climate.register

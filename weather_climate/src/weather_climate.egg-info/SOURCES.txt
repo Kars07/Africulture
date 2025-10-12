@@ -1,0 +1,10 @@
+pyproject.toml
+src/weather_climate/__init__.py
+src/weather_climate/register.py
+src/weather_climate/weather_climate_function.py
+src/weather_climate.egg-info/PKG-INFO
+src/weather_climate.egg-info/SOURCES.txt
+src/weather_climate.egg-info/dependency_links.txt
+src/weather_climate.egg-info/entry_points.txt
+src/weather_climate.egg-info/requires.txt
+src/weather_climate.egg-info/top_level.txt
