@@ -1,0 +1,539 @@
+{
+  "input_message": "{\"function\": \"get_weather_forecast\", \"params\": {\"location\": \"Lagos\", \"days\": 7, \"units\": \"celsius\"}}"
+}
+
+{
+  "value": {
+    "location": "Lagos",
+    "current": {
+      "temperature": 26,
+      "humidity": 88,
+      "rainfall": 0,
+      "wind_speed": 6.9,
+      "conditions": "partly cloudy"
+    },
+    "forecast": [
+      {
+        "date": "2025-10-12",
+        "min_temp": 24.2,
+        "max_temp": 29.2,
+        "rainfall_mm": 0,
+        "humidity": 88,
+        "conditions": "slight rain showers"
+      },
+      {
+        "date": "2025-10-13",
+        "min_temp": 24.9,
+        "max_temp": 29.2,
+        "rainfall_mm": 0,
+        "humidity": 88,
+        "conditions": "thunderstorm"
+      },
+      {
+        "date": "2025-10-14",
+        "min_temp": 25,
+        "max_temp": 28.6,
+        "rainfall_mm": 0,
+        "humidity": 88,
+        "conditions": "thunderstorm"
+      },
+      {
+        "date": "2025-10-15",
+        "min_temp": 24.6,
+        "max_temp": 29.8,
+        "rainfall_mm": 0,
+        "humidity": 88,
+        "conditions": "thunderstorm"
+      },
+      {
+        "date": "2025-10-16",
+        "min_temp": 24.8,
+        "max_temp": 29.2,
+        "rainfall_mm": 0,
+        "humidity": 88,
+        "conditions": "foggy"
+      },
+      {
+        "date": "2025-10-17",
+        "min_temp": 24.6,
+        "max_temp": 30.3,
+        "rainfall_mm": 0,
+        "humidity": 88,
+        "conditions": "slight rain showers"
+      },
+      {
+        "date": "2025-10-18",
+        "min_temp": 24.9,
+        "max_temp": 30.8,
+        "rainfall_mm": 0,
+        "humidity": 88,
+        "conditions": "slight rain showers"
+      }
+    ]
+  }
+}
+
+{
+  "input_message": "{\"function\": \"get_historical_weather\", \"params\": {\"location\": \"Lagos\", \"start_date\": \"2024-09-01\", \"end_date\": \"2024-09-30\", \"metrics\": [\"temperature\", \"rainfall\", \"humidity\"]}}"
+}
+{
+  "value": {
+    "location": "Lagos",
+    "period": "2024-09-01 to 2024-09-30",
+    "data": [
+      {
+        "date": "2024-09-01",
+        "temperature": 25.7,
+        "rainfall": 1.1,
+        "humidity": 81
+      },
+      {
+        "date": "2024-09-02",
+        "temperature": 25.6,
+        "rainfall": 0.4,
+        "humidity": 81
+      },
+      {
+        "date": "2024-09-03",
+        "temperature": 25.6,
+        "rainfall": 0.3,
+        "humidity": 82
+      },
+      {
+        "date": "2024-09-04",
+        "temperature": 25.8,
+        "rainfall": 0.5,
+        "humidity": 81
+      },
+      {
+        "date": "2024-09-05",
+        "temperature": 26,
+        "rainfall": 0.1,
+        "humidity": 81
+      },
+      {
+        "date": "2024-09-06",
+        "temperature": 25.8,
+        "rainfall": 0,
+        "humidity": 82
+      },
+      {
+        "date": "2024-09-07",
+        "temperature": 25.5,
+        "rainfall": 4.8,
+        "humidity": 83
+      },
+      {
+        "date": "2024-09-08",
+        "temperature": 25.8,
+        "rainfall": 0.6,
+        "humidity": 83
+      },
+      {
+        "date": "2024-09-09",
+        "temperature": 26,
+        "rainfall": 0.2,
+        "humidity": 83
+      },
+      {
+        "date": "2024-09-10",
+        "temperature": 26.1,
+        "rainfall": 5.1,
+        "humidity": 84
+      },
+      {
+        "date": "2024-09-11",
+        "temperature": 26.2,
+        "rainfall": 3.9,
+        "humidity": 83
+      },
+      {
+        "date": "2024-09-12",
+        "temperature": 26,
+        "rainfall": 2,
+        "humidity": 84
+      },
+      {
+        "date": "2024-09-13",
+        "temperature": 25.8,
+        "rainfall": 8.1,
+        "humidity": 86
+      },
+      {
+        "date": "2024-09-14",
+        "temperature": 25.7,
+        "rainfall": 4.3,
+        "humidity": 85
+      },
+      {
+        "date": "2024-09-15",
+        "temperature": 26,
+        "rainfall": 0.9,
+        "humidity": 85
+      },
+      {
+        "date": "2024-09-16",
+        "temperature": 26.2,
+        "rainfall": 1.2,
+        "humidity": 84
+      },
+      {
+        "date": "2024-09-17",
+        "temperature": 25.4,
+        "rainfall": 15.3,
+        "humidity": 89
+      },
+      {
+        "date": "2024-09-18",
+        "temperature": 25.6,
+        "rainfall": 13.9,
+        "humidity": 85
+      },
+      {
+        "date": "2024-09-19",
+        "temperature": 26,
+        "rainfall": 1.6,
+        "humidity": 82
+      },
+      {
+        "date": "2024-09-20",
+        "temperature": 26.1,
+        "rainfall": 1.3,
+        "humidity": 83
+      },
+      {
+        "date": "2024-09-21",
+        "temperature": 26,
+        "rainfall": 1.6,
+        "humidity": 84
+      },
+      {
+        "date": "2024-09-22",
+        "temperature": 26.2,
+        "rainfall": 3.2,
+        "humidity": 83
+      },
+      {
+        "date": "2024-09-23",
+        "temperature": 26.3,
+        "rainfall": 1.5,
+        "humidity": 82
+      },
+      {
+        "date": "2024-09-24",
+        "temperature": 26.2,
+        "rainfall": 3.3,
+        "humidity": 84
+      },
+      {
+        "date": "2024-09-25",
+        "temperature": 25,
+        "rainfall": 18.2,
+        "humidity": 89
+      },
+      {
+        "date": "2024-09-26",
+        "temperature": 25.9,
+        "rainfall": 3.5,
+        "humidity": 85
+      },
+      {
+        "date": "2024-09-27",
+        "temperature": 26.4,
+        "rainfall": 5.5,
+        "humidity": 83
+      },
+      {
+        "date": "2024-09-28",
+        "temperature": 26.1,
+        "rainfall": 9.7,
+        "humidity": 83
+      },
+      {
+        "date": "2024-09-29",
+        "temperature": 26.2,
+        "rainfall": 12,
+        "humidity": 84
+      },
+      {
+        "date": "2024-09-30",
+        "temperature": 26.2,
+        "rainfall": 11.8,
+        "humidity": 84
+      }
+    ],
+    "summary": {
+      "avg_temperature": 25.913333333333338,
+      "total_rainfall": 135.9,
+      "avg_humidity": 83.6
+    }
+  }
+}
+{
+  "input_message": "{\"function\": \"get_historical_weather\", \"params\": {\"location\": \"Abuja\", \"start_date\": \"2024-01-01\", \"end_date\": \"2024-01-31\", \"metrics\": [\"temperature\", \"rainfall\"]}}"
+}
+{
+  "value": {
+    "location": "Abuja",
+    "period": "2024-01-01 to 2024-01-31",
+    "data": [
+      {
+        "date": "2024-01-01",
+        "temperature": 27.7,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-02",
+        "temperature": 28.2,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-03",
+        "temperature": 28,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-04",
+        "temperature": 27.8,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-05",
+        "temperature": 27.2,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-06",
+        "temperature": 28.1,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-07",
+        "temperature": 28.2,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-08",
+        "temperature": 27.4,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-09",
+        "temperature": 27.5,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-10",
+        "temperature": 27.1,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-11",
+        "temperature": 27.6,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-12",
+        "temperature": 27.5,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-13",
+        "temperature": 26.7,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-14",
+        "temperature": 26.4,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-15",
+        "temperature": 26.4,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-16",
+        "temperature": 26,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-17",
+        "temperature": 25.8,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-18",
+        "temperature": 26,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-19",
+        "temperature": 26.7,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-20",
+        "temperature": 27.4,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-21",
+        "temperature": 27.5,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-22",
+        "temperature": 27.2,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-23",
+        "temperature": 27.1,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-24",
+        "temperature": 27.7,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-25",
+        "temperature": 26.8,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-26",
+        "temperature": 26.2,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-27",
+        "temperature": 26.1,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-28",
+        "temperature": 26.4,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-29",
+        "temperature": 27.9,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-30",
+        "temperature": 28.2,
+        "rainfall": 0,
+        "humidity": null
+      },
+      {
+        "date": "2024-01-31",
+        "temperature": 28.6,
+        "rainfall": 0,
+        "humidity": null
+      }
+    ],
+    "summary": {
+      "avg_temperature": 27.20645161290323,
+      "total_rainfall": 0,
+      "avg_humidity": null
+    }
+  }
+}
+
+{
+  "input_message": "{\"function\": \"get_climate_alerts\", \"params\": {\"location\": \"Lagos\"}}"
+}
+
+{
+  "value": {
+    "location": "Lagos",
+    "active_alerts": [
+      {
+        "type": "drought",
+        "severity": "moderate",
+        "title": "Dry Period Advisory",
+        "description": "Low rainfall expected - only 0.0mm in the next 2 weeks",
+        "start_time": "2025-10-12T21:12:28.197577",
+        "end_time": "2025-10-26T21:12:28.197585",
+        "recommendations": [
+          "Implement water conservation measures",
+          "Consider drought-resistant crop varieties",
+          "Monitor soil moisture levels",
+          "Plan irrigation schedule carefully"
+        ]
+      }
+    ]
+  }
+}
+
+{
+  "input_message": "{\"function\": \"get_climate_alerts\", \"params\": {\"location\": \"Kano\", \"alert_types\": [\"drought\", \"heatwave\", \"frost\"]}}"
+}
+
+{
+  "value": {
+    "location": "Kano",
+    "active_alerts": [
+      {
+        "type": "heatwave",
+        "severity": "high",
+        "title": "Heatwave Warning",
+        "description": "Temperatures exceeding 35°C expected for 4 days in the coming week",
+        "start_time": "2025-10-12T21:13:30.367140",
+        "end_time": "2025-10-19T21:13:30.367150",
+        "recommendations": [
+          "Increase irrigation frequency",
+          "Provide shade for sensitive crops",
+          "Monitor soil moisture levels closely",
+          "Consider delaying planting of heat-sensitive crops"
+        ]
+      },
+      {
+        "type": "drought",
+        "severity": "moderate",
+        "title": "Dry Period Advisory",
+        "description": "Low rainfall expected - only 0.0mm in the next 2 weeks",
+        "start_time": "2025-10-12T21:13:30.367181",
+        "end_time": "2025-10-26T21:13:30.367183",
+        "recommendations": [
+          "Implement water conservation measures",
+          "Consider drought-resistant crop varieties",
+          "Monitor soil moisture levels",
+          "Plan irrigation schedule carefully"
+        ]
+      }
+    ]
+  }
+}

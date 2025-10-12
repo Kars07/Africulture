@@ -3,14 +3,15 @@ general:
   logging:
     console:
       _type: console
-      level: WARN
+      level: INFO
 
   front_end:
     _type: fastapi
 
-  front_end:
-    _type: console
-
 workflow:
   _type: weather_climate
-  parameter: default_value
+  # Open-Meteo API configuration \
+  forecast_url: "https://api.open-meteo.com/v1/forecast"
+  archive_url: "https://archive-api.open-meteo.com/v1/archive"
+  geocoding_url: "https://geocoding-api.open-meteo.com/v1"
+  timeout: 30
