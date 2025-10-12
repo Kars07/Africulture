@@ -1,0 +1,6 @@
+pyproject.toml
+AfricultureAI.egg-info/PKG-INFO
+AfricultureAI.egg-info/SOURCES.txt
+AfricultureAI.egg-info/dependency_links.txt
+AfricultureAI.egg-info/requires.txt
+AfricultureAI.egg-info/top_level.txt
