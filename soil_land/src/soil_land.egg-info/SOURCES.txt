@@ -1,0 +1,10 @@
+pyproject.toml
+src/soil_land/__init__.py
+src/soil_land/register.py
+src/soil_land/soil_land_function.py
+src/soil_land.egg-info/PKG-INFO
+src/soil_land.egg-info/SOURCES.txt
+src/soil_land.egg-info/dependency_links.txt
+src/soil_land.egg-info/entry_points.txt
+src/soil_land.egg-info/requires.txt
+src/soil_land.egg-info/top_level.txt

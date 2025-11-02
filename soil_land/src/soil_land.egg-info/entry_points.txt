@@ -1,0 +1,2 @@
+[nat.components]
+soil_land = soil_land.register
