@@ -30,13 +30,14 @@ AGENT_BASE_URL = os.getenv('AGENT_BASE_URL', 'http://localhost:8000')
 ALLOWED_ORIGINS = os.getenv('ALLOWED_ORIGINS', 'https://pathwise-chi.vercel.app').split(',')
 PORT = int(os.getenv('PORT', 3001))
 
-# Configure CORS
+# Configure CORS - This is CRITICAL since NAT API doesn't handle CORS
 CORS(
     app,
     origins=ALLOWED_ORIGINS,
-    allow_headers=['Content-Type', 'Authorization', 'X-Requested-With'],
+    allow_headers=['Content-Type', 'Authorization', 'X-Requested-With', 'Accept'],
     methods=['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     supports_credentials=True,
+    expose_headers=['Content-Type', 'Content-Length'],
     max_age=3600
 )
 
