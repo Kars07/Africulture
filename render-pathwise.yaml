@@ -45,5 +45,5 @@ services:
       - key: PYTHONUNBUFFERED
         value: "1"
       - key: ALLOWED_ORIGINS
-        value: "https://pathwise-chi.vercel.app"
+        value: "https://pathwise-tau.vercel.app"
     healthCheckPath: /test
