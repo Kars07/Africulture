@@ -1,13 +1,35 @@
+# Production Configuration for Nigeria Pathwise
+# This config is optimized for Render deployment
+
 general:
+  # Frontend configuration
   front_end:
     _type: fastapi
-    host: 0.0.0.0
-    port: 8000
+    host: ${HOST:-0.0.0.0}
+    port: ${PORT:-8000}
+    # Enable CORS for internal proxy communication
+    cors_origins:
+      - "*"  # Allow all since proxy handles CORS
+    cors_allow_credentials: true
+    cors_allow_methods: ["*"]
+    cors_allow_headers: ["*"]
+  
+  # Logging configuration
+  logging:
+    console:
+      _type: console
+      level: ${LOG_LEVEL:-INFO}
+  
+  # Performance optimization
+  use_uvloop: true
 
+# Custom tools for career guidance
 functions:
   current_datetime:
     _type: current_datetime
+    description: "Get current date and time for context"
 
+# LLM configuration using NVIDIA NIM
 llms:
   nim_llm:
     _type: nim
@@ -15,20 +37,39 @@ llms:
     temperature: 0.7
     max_tokens: 4096
     api_key: ${NVIDIA_API_KEY}
+    # Timeout settings for production
+    timeout: 180
+    max_retries: 3
 
+# Embedder for document search
 embedders:
   nim_embedder:
     _type: nim
     model_name: nvidia/nv-embedqa-e5-v5
+    api_key: ${NVIDIA_API_KEY}
 
+# Main workflow configuration
 workflow:
   _type: nigeria_pathwise
+  description: "AI-Powered Career Guidance and Path Planning Assistant for Nigeria"
+  
+  # Tools available to the agent
   tool_names:
     - current_datetime
+  
+  # LLM and embedder references
   llm_name: nim_llm
   embedder_name: nim_embedder
+  
+  # Conversation settings
   max_history: 30
   personality: "mentor"
+  
+  # Document ingestion
   ingest_glob: "data/career_resources/*.{pdf,txt,docx,csv,xlsx}"
-  description: "AI-Powered Career Guidance and Path Planning Assistant for Nigeria"
   chunk_size: 4096
+  
+  # Agent settings
+  verbose: true
+  max_iterations: 10
+  max_execution_time: 180

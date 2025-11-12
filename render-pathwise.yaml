@@ -1,0 +1,49 @@
+services:
+  # Nigeria Pathwise Main Service
+  - type: web
+    name: nigeria-pathwise-api
+    env: python
+    region: oregon
+    plan: starter
+    buildCommand: |
+      pip install --upgrade pip
+      cd nigeria_pathwise && pip install -e . && cd ..
+      pip install -e .
+      pip install flask flask-cors requests python-dotenv PyMuPDF pandas numpy
+    startCommand: |
+      nat serve --config nigeria_pathwise/src/nigeria_pathwise/configs/config.yml
+    envVars:
+      - key: NVIDIA_API_KEY
+        sync: false
+      - key: PORT
+        value: 8000
+      - key: HOST
+        value: 0.0.0.0
+      - key: PYTHONUNBUFFERED
+        value: "1"
+    healthCheckPath: /health
+
+  # CORS Proxy Service (Frontend-facing)
+  - type: web
+    name: nigeria-pathwise-proxy
+    env: python
+    region: oregon
+    plan: starter
+    buildCommand: |
+      pip install --upgrade pip
+      pip install flask flask-cors requests python-dotenv
+    startCommand: |
+      python cors_proxy.py
+    envVars:
+      - key: AGENT_BASE_URL
+        fromService:
+          type: web
+          name: nigeria-pathwise-api
+          envVarKey: RENDER_INTERNAL_URL
+      - key: PORT
+        value: 3001
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: ALLOWED_ORIGINS
+        value: "https://pathwise-chi.vercel.app"
+    healthCheckPath: /test
