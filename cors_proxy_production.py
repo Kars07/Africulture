@@ -27,7 +27,7 @@ app = Flask(__name__)
 
 # Configuration
 AGENT_BASE_URL = os.getenv('AGENT_BASE_URL', 'http://localhost:8000')
-ALLOWED_ORIGINS = os.getenv('ALLOWED_ORIGINS', 'https://pathwise-chi.vercel.app').split(',')
+ALLOWED_ORIGINS = os.getenv('ALLOWED_ORIGINS', 'https://pathwise-tau.vercel.app').split(',')
 PORT = int(os.getenv('PORT', 3001))
 
 # Configure CORS - This is CRITICAL since NAT API doesn't handle CORS
