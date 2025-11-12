@@ -3,14 +3,28 @@ general:
   logging:
     console:
       _type: console
-      level: WARN
+      level: INFO
 
   front_end:
     _type: fastapi
 
-  front_end:
-    _type: console
+
+llms:
+  nim_llm:
+    _type: nim
+    model_name: moonshotai/kimi-k2-instruct
+    temperature: 0.0
+    max_tokens: 2048
+    api_key: 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
 
 workflow:
   _type: soil_land
-  parameter: default_value
+  # SoilGrids API configuration
+  soilgrids_url: "https://rest.isric.org/soilgrids/v2.0"
+  # Open-Meteo Soil API configuration
+  soil_api_url: "https://api.open-meteo.com/v1/forecast"
+  geocoding_url: "https://geocoding-api.open-meteo.com/v1"
+  timeout: 30
+  # LLM configuration for AI analysis
+  llm_name: nim_llm
+  max_history: 15
